@@ -1,0 +1,34 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package addition;
+
+import javax.swing.JOptionPane;
+
+/**
+ *
+ * @author Aluno
+ */
+public class Addition {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String firstNumber =
+                JOptionPane.showInputDialog( "Enter first integer");
+        String secondNumber =
+                JOptionPane.showInputDialog( "Enter first integer");
+        
+        int number1 = Integer.parseInt(firstNumber);
+        int number2 = Integer.parseInt( secondNumber);
+        
+        int sum = number1 + number2; //soma os numeros
+                
+        JOptionPane.showMessageDialog( null, "the sum is" + sum, "Sum of two Integers", JOptionPane.PLAIN_MESSAGE);
+                
+    }
+    
+}
