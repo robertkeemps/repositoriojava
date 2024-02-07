@@ -1,0 +1,70 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package calculadora;
+
+/**
+ *
+ * @author Aluno
+ */
+
+import javax.swing.JOptionPane;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+        String resp = JOptionPane.showInputDialog("Digite A para soma, B para subtração, C para multiplicação ou D para divisão: ");
+        
+        if(resp.equals("A")) {
+            String firstNumber = JOptionPane.showInputDialog("Digite o primeiro número inteiro: ");
+            String secondNumber = JOptionPane.showInputDialog("Digite o segundo número inteiro: ");
+
+            int number1 = Integer.parseInt(firstNumber);
+            int number2 = Integer.parseInt(secondNumber);
+
+            int sum = number1 + number2;
+
+            JOptionPane.showMessageDialog(null, "A soma é: " + sum, "Soma de Dois Inteiros", JOptionPane.PLAIN_MESSAGE);
+        }
+        else if(resp.equals("B")) {
+            String firstNumber = JOptionPane.showInputDialog("Digite o primeiro número inteiro: ");
+            String secondNumber = JOptionPane.showInputDialog("Digite o segundo número inteiro: ");
+
+            int number1 = Integer.parseInt(firstNumber);
+            int number2 = Integer.parseInt(secondNumber);
+
+            int sub = number1 - number2;
+
+            JOptionPane.showMessageDialog(null, "A subtração é: " + sub, "Subtração de Dois Números", JOptionPane.PLAIN_MESSAGE);
+        }
+        else if(resp.equals("C")) {
+            String firstNumber = JOptionPane.showInputDialog("Digite o primeiro número inteiro: ");
+            String secondNumber = JOptionPane.showInputDialog("Digite o segundo número inteiro: ");
+
+            int number1 = Integer.parseInt(firstNumber);
+            int number2 = Integer.parseInt(secondNumber);
+
+            int multiplication = number1 * number2;
+
+            JOptionPane.showMessageDialog(null, "A multiplicação é: " + multiplication, "Multiplicação de Dois Números", JOptionPane.PLAIN_MESSAGE);
+        }
+        else if(resp.equals("D")) {
+            String firstNumber = JOptionPane.showInputDialog("Digite o primeiro número inteiro: ");
+            String secondNumber = JOptionPane.showInputDialog("Digite o segundo número inteiro: ");
+
+            int number1 = Integer.parseInt(firstNumber);
+            int number2 = Integer.parseInt(secondNumber);
+
+            if(number2 != 0) {
+                double division = (double) number1 / number2;
+                JOptionPane.showMessageDialog(null, "A divisão é: " + division, "Divisão de Dois Números", JOptionPane.PLAIN_MESSAGE);
+            } else {
+                JOptionPane.showMessageDialog(null, "Erro: Não é possível dividir por zero.", "Erro na Divisão", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        else {
+            JOptionPane.showMessageDialog(null, "Opção inválida.", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+}
