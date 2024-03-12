@@ -1,5 +1,6 @@
 package buttonframetest;
 
+
 import java.awt.FlowLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -21,13 +22,12 @@ import javax.swing.JOptionPane;
       super("Testando teu botão");
       setLayout(new FlowLayout());
 
-      plainJButton = new JButton("Botão Principal");
+      plainJButton = new JButton("Botão para realizar seu cadastro na empresa");
       add(plainJButton);
 
-      Icon bug1 = new ImageIcon(getClass().getResource("bug2.gif"));
-      Icon bug2 = new ImageIcon(getClass().getResource("bug1.gif"));
-      fancyJButton = new JButton("Botao Secundário", bug1);
-      fancyJButton.setRolloverIcon(bug2);
+      Icon bug1 = new ImageIcon(getClass().getResource("foto1.jpg"));
+     
+      fancyJButton = new JButton("Botão para confirmar seu cadastro", bug1);
       add(fancyJButton);
 
       ButtonHandler handler = new ButtonHandler();
@@ -44,3 +44,4 @@ import javax.swing.JOptionPane;
     }
   }
 }
+
